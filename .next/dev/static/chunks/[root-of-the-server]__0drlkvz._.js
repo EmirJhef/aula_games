@@ -40,7 +40,6 @@ function Home() {
     const [games, setGames] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [titulo, setTitulo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [categoria, setCategoria] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
-    // Busca os jogos no Back-end via GET
     const carregarGames = async ()=>{
         const resposta = await fetch('/api/games');
         const dados = await resposta.json();
@@ -51,7 +50,6 @@ function Home() {
             carregarGames();
         }
     }["Home.useEffect"], []);
-    // Envia um novo jogo para o Back-end via POST
     const adicionarGame = async (e)=>{
         e.preventDefault();
         if (!titulo || !categoria) return;
@@ -74,10 +72,10 @@ function Home() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                 className: "text-3xl font-bold mb-6",
-                children: "🎮 Catálogo de Games Escola"
+                children: "🎮 Biblioteca Games"
             }, void 0, false, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 37,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -92,7 +90,7 @@ function Home() {
                         className: "p-2 flex-[2] border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                     }, void 0, false, {
                         fileName: "[project]/pages/index.js",
-                        lineNumber: 41,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -103,7 +101,7 @@ function Home() {
                         className: "p-2 flex-1 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                     }, void 0, false, {
                         fileName: "[project]/pages/index.js",
-                        lineNumber: 48,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -112,13 +110,13 @@ function Home() {
                         children: "Cadastrar"
                     }, void 0, false, {
                         fileName: "[project]/pages/index.js",
-                        lineNumber: 55,
+                        lineNumber: 52,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 40,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -126,7 +124,7 @@ function Home() {
                 children: "Jogos Cadastrados"
             }, void 0, false, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 64,
+                lineNumber: 60,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -139,12 +137,12 @@ function Home() {
                                     children: game.titulo
                                 }, void 0, false, {
                                     fileName: "[project]/pages/index.js",
-                                    lineNumber: 71,
+                                    lineNumber: 67,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/pages/index.js",
-                                lineNumber: 71,
+                                lineNumber: 67,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -152,24 +150,24 @@ function Home() {
                                 children: game.categoria
                             }, void 0, false, {
                                 fileName: "[project]/pages/index.js",
-                                lineNumber: 72,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, game.id, true, {
                         fileName: "[project]/pages/index.js",
-                        lineNumber: 67,
+                        lineNumber: 63,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/pages/index.js",
-                lineNumber: 65,
+                lineNumber: 61,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/pages/index.js",
-        lineNumber: 36,
+        lineNumber: 34,
         columnNumber: 5
     }, this);
 }

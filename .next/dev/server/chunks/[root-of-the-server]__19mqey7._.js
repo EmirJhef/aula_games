@@ -18,7 +18,6 @@ __turbopack_context__.s([
     "default",
     ()=>handler
 ]);
-// Banco de dados em memória para os jogos
 let listaGames = [
     {
         id: 1,
@@ -39,7 +38,7 @@ function handler(req, res) {
         const { titulo, categoria } = req.body;
         if (!titulo || !categoria) {
             return res.status(400).json({
-                erro: 'Preencha o título e a categoria!'
+                erro: 'Preencha o título e a categoria'
             });
         }
         const novoGame = {
@@ -51,7 +50,7 @@ function handler(req, res) {
         return res.status(201).json(novoGame);
     }
     return res.status(405).json({
-        mensagem: 'Método não permitido'
+        mensagem: 'Erro, tente novamente'
     });
 }
 }),

@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <div className="p-8 font-sans max-w-[600px] mx-auto">
-      <h1 className="text-3xl font-bold mb-6">🎮 Catálogo de Games Escola</h1>
+      <h1 className="text-3xl font-bold mb-6">🎮 Biblioteca Games</h1>
 
       <form onSubmit={adicionarGame} className="flex gap-2.5 mb-8">
         <input
